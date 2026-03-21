@@ -1,0 +1,75 @@
+/* ── Keyframes ─────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-60px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-80px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(80px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.82); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Base hidden state ─────────────────────────────── */
+.anim {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+/* ── Visible — triggers animation ─────────────────── */
+.anim.visible {
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.anim.fade-up.visible    { animation-name: fadeUp; }
+.anim.fade-down.visible  { animation-name: fadeDown; }
+.anim.fade-left.visible  { animation-name: fadeLeft; }
+.anim.fade-right.visible { animation-name: fadeRight; }
+.anim.zoom-in.visible    { animation-name: zoomIn; }
+.anim.fade-in.visible    { animation-name: fadeIn; }
+
+/* ── Durations — all slower ────────────────────────── */
+.anim.dur-400.visible { animation-duration: 0.8s; }
+.anim.dur-600.visible { animation-duration: 1.0s; }
+.anim.dur-700.visible { animation-duration: 1.1s; }
+.anim.dur-800.visible { animation-duration: 1.2s; }
+.anim.dur-900.visible { animation-duration: 1.4s; }
+
+/* ── Stagger delays — wider gaps ───────────────────── */
+.anim.d-0.visible  { animation-delay: 0s; }
+.anim.d-1.visible  { animation-delay: 0.15s; }
+.anim.d-2.visible  { animation-delay: 0.3s; }
+.anim.d-3.visible  { animation-delay: 0.45s; }
+.anim.d-4.visible  { animation-delay: 0.6s; }
+.anim.d-5.visible  { animation-delay: 0.75s; }
+.anim.d-6.visible  { animation-delay: 0.9s; }
+.anim.d-7.visible  { animation-delay: 1.05s; }
+
+/* ── Page transition — slow & smooth ──────────────── */
+.page-enter {
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Respect reduced motion ────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .anim, .page-enter {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

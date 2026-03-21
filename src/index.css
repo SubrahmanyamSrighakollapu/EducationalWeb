@@ -1,0 +1,49 @@
+@import './styles/animate.css';
+
+:root {
+  --primary: #03adfc;
+  --secondary: #c6e8f7;
+  --white: #ffffff;
+  --dark: #0d1b2a;
+  --text-dark: #1a1a2e;
+  --text-gray: #555555;
+  --light-bg: #f4fbff;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  font-family: var(--sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light;
+}
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--text-dark);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}

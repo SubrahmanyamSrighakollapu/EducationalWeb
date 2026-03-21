@@ -1,0 +1,201 @@
+.testimonials {
+  padding: 80px 0 60px;
+  background: #fff;
+  overflow: hidden;
+}
+.testimonials-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+/* ── Section Header ───────────────────────────────── */
+.section-header { text-align: center; margin-bottom: 52px; }
+.section-tag-center {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; margin-bottom: 12px;
+}
+.section-tag-center span:not(.tag-line-h) {
+  font-size: 12px; font-weight: 700; letter-spacing: 2.5px;
+  color: #03adfc; text-transform: uppercase;
+}
+.tag-line-h { display: block; width: 36px; height: 2px; background: #03adfc; }
+.section-header h2 {
+  font-size: clamp(26px, 3vw, 38px); font-weight: 800; color: #1a1a2e; margin: 0;
+}
+
+/* ── Track — 3 cards side by side ────────────────── */
+.testi-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 40px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Slide-out animations */
+.testi-track.slide-next {
+  animation: slideOutLeft 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.testi-track.slide-prev {
+  animation: slideOutRight 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes slideOutLeft {
+  0%   { opacity: 1; transform: translateX(0); }
+  40%  { opacity: 0; transform: translateX(-40px); }
+  41%  { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideOutRight {
+  0%   { opacity: 1; transform: translateX(0); }
+  40%  { opacity: 0; transform: translateX(40px); }
+  41%  { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Column ───────────────────────────────────────── */
+.testi-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+/* Side cards slightly scaled down */
+.testi-col:not(.featured) {
+  opacity: 0.7;
+  transform: scale(0.96);
+}
+.testi-col.featured {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Avatar ───────────────────────────────────────── */
+.testi-avatar-wrap {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #c6e8f7;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+  transition: border-color 0.3s;
+}
+.testi-col.featured .testi-avatar-wrap {
+  border-color: #03adfc;
+  box-shadow: 0 0 0 4px rgba(3, 173, 252, 0.15);
+}
+.testi-avatar {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.testi-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 3px;
+}
+.testi-course {
+  font-size: 12.5px;
+  color: #888;
+  margin-bottom: 18px;
+}
+
+/* ── Card ─────────────────────────────────────────── */
+.testi-card {
+  background: #f4fbff;
+  border: 1px solid #e8f4fd;
+  padding: 24px 20px;
+  width: 100%;
+  border-radius: 4px;
+  transition: background 0.3s, border-color 0.3s;
+}
+.testi-card p {
+  font-size: 13.5px;
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Featured (center) */
+.testi-card.active-card {
+  background: #03adfc;
+  border-color: #03adfc;
+}
+.testi-card.active-card p {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ── Dots ─────────────────────────────────────────── */
+.testi-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 0;
+}
+.testi-dot {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, border-color 0.3s, transform 0.2s;
+}
+.testi-dot:hover { transform: scale(1.15); border-color: #03adfc; }
+.testi-dot.active {
+  background: #03adfc;
+  border-color: #03adfc;
+}
+
+/* ── Arrows ───────────────────────────────────────── */
+.testi-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+.testi-arrows button {
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid #c6e8f7;
+  background: #fff;
+  color: #03adfc;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+  line-height: 1;
+}
+.testi-arrows button:hover {
+  background: #03adfc;
+  color: #fff;
+  border-color: #03adfc;
+  transform: scale(1.08);
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 900px) {
+  .testi-track {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto 40px;
+  }
+  .testi-col:not(.featured) { display: none; }
+  .testi-col.featured { opacity: 1; transform: scale(1); }
+}
+@media (max-width: 480px) {
+  .testimonials { padding: 52px 0 40px; }
+}

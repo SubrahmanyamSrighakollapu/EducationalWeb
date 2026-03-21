@@ -1,0 +1,112 @@
+.instructors {
+  padding: 80px 0;
+  background: #f4fbff;
+}
+.instructors-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-header { text-align: center; margin-bottom: 48px; }
+.section-tag-center {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; margin-bottom: 12px;
+}
+.section-tag-center span:not(.tag-line-h) {
+  font-size: 12px; font-weight: 700; letter-spacing: 2.5px;
+  color: #03adfc; text-transform: uppercase;
+}
+.tag-line-h { display: block; width: 36px; height: 2px; background: #03adfc; }
+.section-header h2 {
+  font-size: clamp(26px, 3vw, 38px); font-weight: 800; color: #1a1a2e; margin: 0;
+}
+
+/* Grid */
+.instructors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+.instructor-card {
+  background: #fff;
+  border: 1px solid #e8f4fd;
+  border-radius: 4px;
+  overflow: visible;
+  text-align: center;
+}
+
+/* Image area */
+.instructor-img-wrap {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+.instructor-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* Social icons bar — sits at bottom of image */
+.instructor-socials {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  background: rgba(198, 232, 247, 0.95);
+  padding: 10px 0;
+  transform: translateY(100%);
+  transition: transform 0.25s;
+}
+.instructor-card:hover .instructor-socials {
+  transform: translateY(0);
+}
+.instructor-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #03adfc;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 0 4px;
+  transition: background 0.2s;
+}
+.instructor-socials a:hover { background: #029de0; }
+
+/* Info */
+.instructor-info {
+  padding: 16px 12px 20px;
+}
+.instructor-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 5px;
+}
+.instructor-info p {
+  font-size: 12.5px;
+  color: #888;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .instructors-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .instructors { padding: 52px 0; }
+  .instructors-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .instructor-img-wrap { height: 200px; }
+}
+@media (max-width: 380px) {
+  .instructors-grid { grid-template-columns: 1fr; }
+}
