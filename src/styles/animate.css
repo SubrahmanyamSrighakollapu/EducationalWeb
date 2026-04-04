@@ -60,9 +60,9 @@
 .anim.d-6.visible  { animation-delay: 0.9s; }
 .anim.d-7.visible  { animation-delay: 1.05s; }
 
-/* ── Page transition — slow & smooth ──────────────── */
+/* ── Page transition — opacity only so transforms don't break IntersectionObserver ── */
 .page-enter {
-  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: fadeIn 0.4s ease both;
 }
 
 /* ── Respect reduced motion ────────────────────────── */

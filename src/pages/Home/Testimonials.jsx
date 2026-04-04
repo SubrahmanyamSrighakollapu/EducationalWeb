@@ -12,19 +12,19 @@ const testimonials = [
     img: testimonial1,
     name: 'Sneha Patel',
     course: 'Business Management Course',
-    text: '"Joining Pay Bharath Skill Education was the best decision I made for my career. The business management sessions gave me clarity on leadership, planning, and decision-making. The instructors made complex topics easy to understand."',
+    text: '"Joining Education Web was the best decision I made for my career. The business management sessions gave me clarity on leadership, planning, and decision-making. The instructors made complex topics easy to understand."',
   },
   {
     img: testimonial2,
     name: 'Arjun Verma',
     course: 'Language Course',
-    text: '"I enrolled in the Spoken English course, and it completely changed my confidence level. The classes were interactive and fun, and I now communicate fluently in my workplace. Thank you, Pay Bharath Skill Education"',
+    text: '"I enrolled in the Spoken English course, and it completely changed my confidence level. The classes were interactive and fun, and I now communicate fluently in my workplace. Thank you, Education Web"',
   },
   {
     img: testimonial3,
     name: 'Priya Sharma',
     course: 'IT Software Course',
-    text: '"Pay Bharath Skill Education helped me build a strong foundation in software development. The instructors were patient and explained every concept clearly. I secured my first job as a junior developer within three months."',
+    text: '"Education Web helped me build a strong foundation in software development. The instructors were patient and explained every concept clearly. I secured my first job as a junior developer within three months."',
   },
   {
     img: testimonial4,

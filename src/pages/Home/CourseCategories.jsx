@@ -4,7 +4,7 @@ import Animate from '../../components/Animate'
 import './CourseCategories.css'
 
 const categories = [
-  { icon: <FaLaptopCode />, label: 'Web Development', count: '12 Courses', color: '#03adfc' },
+  { icon: <FaLaptopCode />, label: 'Web Development', count: '12 Courses', color: 'rgba(36, 89, 159, 1)' },
   { icon: <FaRobot />,      label: 'AI & Machine Learning', count: '8 Courses',  color: '#6c63ff' },
   { icon: <FaChartLine />,  label: 'Business & Finance', count: '10 Courses', color: '#ff6b6b' },
   { icon: <FaLanguage />,   label: 'Language Courses', count: '15 Courses', color: '#f7b731' },

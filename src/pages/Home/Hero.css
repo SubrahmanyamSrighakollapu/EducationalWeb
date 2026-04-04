@@ -42,7 +42,7 @@
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #03adfc;
+  color: rgba(36, 89, 159, 1);
   margin-bottom: 16px;
   text-transform: uppercase;
 }
@@ -65,7 +65,7 @@
   flex-wrap: wrap;
 }
 .btn-primary {
-  background: #03adfc;
+  background: rgba(36, 89, 159, 1);
   color: #fff;
   text-decoration: none;
   font-size: 14px;
@@ -116,8 +116,8 @@
   line-height: 1;
 }
 .hero-arrows button:hover {
-  background: #03adfc;
-  border-color: #03adfc;
+  background: rgba(36, 89, 159, 1);
+  border-color: rgba(36, 89, 159, 1);
 }
 
 /* Dots */
@@ -141,8 +141,8 @@
   transition: background 0.2s;
 }
 .dot.active {
-  background: #03adfc;
-  border-color: #03adfc;
+  background: rgba(36, 89, 159, 1);
+  border-color: rgba(36, 89, 159, 1);
 }
 
 /* Content animations — re-trigger on slide change via key */

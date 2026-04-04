@@ -1,51 +1,60 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
+import { StoreProvider } from './context/StoreContext'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Courses from './pages/Courses'
+import CourseDetail from './pages/Courses/CourseDetail'
+import CartPage from './pages/Cart'
+import WishlistPage from './pages/Wishlist'
 import ContactPage from './pages/Contact'
+import PrivacyPolicy from './pages/Legal/PrivacyPolicy'
+import TermsOfService from './pages/Legal/TermsOfService'
+import RefundPolicy from './pages/Legal/RefundPolicy'
 import './App.css'
 import './styles/animate.css'
 
-function PageWrapper({ children }) {
-  const location = useLocation()
-  const ref = useRef(null)
-
+function ScrollToTop() {
+  const { pathname } = useLocation()
   useEffect(() => {
-    if (ref.current) {
-      ref.current.classList.remove('page-enter')
-      void ref.current.offsetWidth // reflow to restart animation
-      ref.current.classList.add('page-enter')
-    }
     window.scrollTo({ top: 0, behavior: 'instant' })
-  }, [location.pathname])
-
-  return <div ref={ref} className="page-enter">{children}</div>
+  }, [pathname])
+  return null
 }
 
 function AppRoutes() {
+  const location = useLocation()
   return (
-    <PageWrapper>
-      <Routes>
+    <div key={location.pathname} className="page-enter">
+      <Routes location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:slug" element={<CourseDetail />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
       </Routes>
-    </PageWrapper>
+    </div>
   )
 }
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <main>
-        <AppRoutes />
-      </main>
-      <Footer />
+      <StoreProvider>
+        <Header />
+        <main>
+          <ScrollToTop />
+          <AppRoutes />
+        </main>
+        <Footer />
+      </StoreProvider>
     </BrowserRouter>
   )
 }

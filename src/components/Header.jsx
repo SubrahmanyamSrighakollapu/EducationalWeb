@@ -1,14 +1,14 @@
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import { FiChevronDown, FiArrowRight, FiMenu, FiX } from 'react-icons/fi'
-import { BsGrid3X3Gap } from 'react-icons/bs'
+import { FiChevronDown, FiArrowRight, FiMenu, FiX, FiShoppingCart, FiHeart } from 'react-icons/fi'
+import { useStore } from '../context/StoreContext'
+import logoImg from '../assets/logo.png'
 import './Header.css'
 
 export default function Header() {
-  const [enrollOpen, setEnrollOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileEnrollOpen, setMobileEnrollOpen] = useState(false)
-
+  const { cart, wishlist } = useStore()
   const closeMenu = () => setMobileOpen(false)
 
   return (
@@ -17,8 +17,7 @@ export default function Header() {
 
         {/* Logo */}
         <NavLink to="/" className="logo">
-          <BsGrid3X3Gap className="logo-icon" />
-          <span>Pay Bharath Skill Education</span>
+          <img src={logoImg} alt="Education Web" className="logo-img" />
         </NavLink>
 
         {/* Desktop Nav */}
@@ -26,32 +25,25 @@ export default function Header() {
           <NavLink to="/" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>HOME</NavLink>
           <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>ABOUT</NavLink>
           <NavLink to="/courses" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>COURSES</NavLink>
-
-          <div
-            className="dropdown"
-            onMouseEnter={() => setEnrollOpen(true)}
-            onMouseLeave={() => setEnrollOpen(false)}
-          >
-            <button className={`nav-item dropdown-btn${enrollOpen ? ' active' : ''}`}>
-              ENROLL <FiChevronDown className={`chevron${enrollOpen ? ' open' : ''}`} />
-            </button>
-            {enrollOpen && (
-              <div className="dropdown-menu">
-                <NavLink to="/enroll/online" className="dropdown-item">Online Courses</NavLink>
-                <NavLink to="/enroll/offline" className="dropdown-item">Offline Courses</NavLink>
-              </div>
-            )}
-          </div>
-
           <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>CONTACT</NavLink>
         </nav>
 
-        {/* CTA — desktop */}
-        <NavLink to="/enroll" className="join-btn">
-          Join Now <FiArrowRight />
-        </NavLink>
+        {/* Icons + CTA */}
+        <div className="header-actions">
+          <NavLink to="/wishlist" className="icon-btn" title="Wishlist">
+            <FiHeart />
+            {wishlist.length > 0 && <span className="icon-badge">{wishlist.length}</span>}
+          </NavLink>
+          <NavLink to="/cart" className="icon-btn" title="Cart">
+            <FiShoppingCart />
+            {cart.length > 0 && <span className="icon-badge">{cart.length}</span>}
+          </NavLink>
+          <NavLink to="/enroll" className="join-btn">
+            Join Now <FiArrowRight />
+          </NavLink>
+        </div>
 
-        {/* Hamburger — mobile/tablet */}
+        {/* Hamburger */}
         <button className="hamburger" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
           {mobileOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -62,24 +54,15 @@ export default function Header() {
         <NavLink to="/" className="mobile-item" onClick={closeMenu}>HOME</NavLink>
         <NavLink to="/about" className="mobile-item" onClick={closeMenu}>ABOUT</NavLink>
         <NavLink to="/courses" className="mobile-item" onClick={closeMenu}>COURSES</NavLink>
-
-        <div className="mobile-dropdown">
-          <button
-            className="mobile-item mobile-dropdown-btn"
-            onClick={() => setMobileEnrollOpen(!mobileEnrollOpen)}
-          >
-            ENROLL <FiChevronDown className={`chevron${mobileEnrollOpen ? ' open' : ''}`} />
-          </button>
-          {mobileEnrollOpen && (
-            <div className="mobile-dropdown-menu">
-              <NavLink to="/enroll/online" className="mobile-sub-item" onClick={closeMenu}>Online Courses</NavLink>
-              <NavLink to="/enroll/offline" className="mobile-sub-item" onClick={closeMenu}>Offline Courses</NavLink>
-            </div>
-          )}
-        </div>
-
         <NavLink to="/contact" className="mobile-item contact-link" onClick={closeMenu}>CONTACT</NavLink>
-
+        <div className="mobile-icon-row">
+          <NavLink to="/wishlist" className="mobile-icon-btn" onClick={closeMenu}>
+            <FiHeart /> Wishlist {wishlist.length > 0 && <span className="icon-badge">{wishlist.length}</span>}
+          </NavLink>
+          <NavLink to="/cart" className="mobile-icon-btn" onClick={closeMenu}>
+            <FiShoppingCart /> Cart {cart.length > 0 && <span className="icon-badge">{cart.length}</span>}
+          </NavLink>
+        </div>
         <NavLink to="/enroll" className="mobile-join" onClick={closeMenu}>
           Join Now <FiArrowRight />
         </NavLink>
