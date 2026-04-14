@@ -1,8 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import { FiChevronDown, FiArrowRight, FiMenu, FiX, FiShoppingCart, FiHeart, FiUser, FiLogOut, FiGrid } from 'react-icons/fi'
+import { FiArrowRight, FiMenu, FiX, FiShoppingCart, FiHeart } from 'react-icons/fi'
 import { useStore } from '../context/StoreContext'
-import { useAuth } from '../context/auth/AuthContext'
 import logoImg from '../assets/logo.png'
 import './Header.css'
 
@@ -10,7 +9,6 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileEnrollOpen, setMobileEnrollOpen] = useState(false)
   const { cart, wishlist } = useStore()
-  const { user, logout } = useAuth()
   const closeMenu = () => setMobileOpen(false)
 
   return (
@@ -40,29 +38,9 @@ export default function Header() {
             <FiShoppingCart />
             {cart.length > 0 && <span className="icon-badge">{cart.length}</span>}
           </NavLink>
-          {user ? (
-            <div className="header-user-menu">
-              <button className="header-user-btn">
-                <div className="header-avatar">{user.name?.[0]?.toUpperCase()}</div>
-                <span className="header-user-name">{user.name?.split(' ')[0]}</span>
-              </button>
-              <div className="header-user-dropdown">
-                <NavLink to={user.role === 'admin' ? '/admin' : '/student'} className="hud-item">
-                  <FiGrid /> Dashboard
-                </NavLink>
-                <NavLink to={user.role === 'admin' ? '/admin/profile' : '/student/profile'} className="hud-item">
-                  <FiUser /> Profile
-                </NavLink>
-                <button className="hud-item hud-logout" onClick={logout}>
-                  <FiLogOut /> Logout
-                </button>
-              </div>
-            </div>
-          ) : (
-            <NavLink to="/login" className="join-btn">
-              Sign In <FiArrowRight />
-            </NavLink>
-          )}
+          <NavLink to="/login" className="join-btn">
+            Sign In <FiArrowRight />
+          </NavLink>
         </div>
 
         {/* Hamburger */}
