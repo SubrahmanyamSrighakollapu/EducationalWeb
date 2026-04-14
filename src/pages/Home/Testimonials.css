@@ -18,9 +18,9 @@
 }
 .section-tag-center span:not(.tag-line-h) {
   font-size: 12px; font-weight: 700; letter-spacing: 2.5px;
-  color: #03adfc; text-transform: uppercase;
+  color: rgba(36, 89, 159, 1); text-transform: uppercase;
 }
-.tag-line-h { display: block; width: 36px; height: 2px; background: #03adfc; }
+.tag-line-h { display: block; width: 36px; height: 2px; background: rgba(36, 89, 159, 1); }
 .section-header h2 {
   font-size: clamp(26px, 3vw, 38px); font-weight: 800; color: #1a1a2e; margin: 0;
 }
@@ -88,7 +88,7 @@
   transition: border-color 0.3s;
 }
 .testi-col.featured .testi-avatar-wrap {
-  border-color: #03adfc;
+  border-color: rgba(36, 89, 159, 1);
   box-shadow: 0 0 0 4px rgba(3, 173, 252, 0.15);
 }
 .testi-avatar {
@@ -127,8 +127,8 @@
 
 /* Featured (center) */
 .testi-card.active-card {
-  background: #03adfc;
-  border-color: #03adfc;
+  background: rgba(36, 89, 159, 1);
+  border-color: rgba(36, 89, 159, 1);
 }
 .testi-card.active-card p {
   color: #fff;
@@ -151,10 +151,10 @@
   padding: 0;
   transition: background 0.3s, border-color 0.3s, transform 0.2s;
 }
-.testi-dot:hover { transform: scale(1.15); border-color: #03adfc; }
+.testi-dot:hover { transform: scale(1.15); border-color: rgba(36, 89, 159, 1); }
 .testi-dot.active {
-  background: #03adfc;
-  border-color: #03adfc;
+  background: rgba(36, 89, 159, 1);
+  border-color: rgba(36, 89, 159, 1);
 }
 
 /* ── Arrows ───────────────────────────────────────── */
@@ -169,7 +169,7 @@
   height: 44px;
   border: 1.5px solid #c6e8f7;
   background: #fff;
-  color: #03adfc;
+  color: rgba(36, 89, 159, 1);
   font-size: 24px;
   cursor: pointer;
   border-radius: 50%;
@@ -180,9 +180,9 @@
   line-height: 1;
 }
 .testi-arrows button:hover {
-  background: #03adfc;
+  background: rgba(36, 89, 159, 1);
   color: #fff;
-  border-color: #03adfc;
+  border-color: rgba(36, 89, 159, 1);
   transform: scale(1.08);
 }
 

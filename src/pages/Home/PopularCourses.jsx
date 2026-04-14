@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { FaStar, FaUserAlt, FaClock, FaUsers } from 'react-icons/fa'
 import course1 from '../../assets/couroses1.jpg'
 import course2 from '../../assets/couroses2.jpg'
@@ -8,34 +8,37 @@ import './PopularCourses.css'
 
 const courses = [
   {
+    slug: 'data-science-python-pandas',
     img: course1,
-    price: 'INR 20,999/-',
+    price: '₹799',
     rating: 4,
-    reviews: 187,
-    title: 'Machine Learning & AI with Python Course',
-    instructor: 'Mukesh',
-    hours: '149 Hrs',
-    students: '30 Students',
+    reviews: 2900,
+    title: 'Data Science with Python & Pandas',
+    instructor: 'Sarah Jenkins',
+    hours: '38 Hrs',
+    students: '9,100 Students',
   },
   {
+    slug: 'full-stack-web-development-bootcamp',
     img: course2,
-    price: 'INR 10,999/-',
-    rating: 4,
-    reviews: 123,
-    title: 'Entrepreneurship & Startup Development Certification',
-    instructor: 'Anita Joshi',
-    hours: '109 Hrs',
-    students: '15 Students',
+    price: '₹799',
+    rating: 5,
+    reviews: 3920,
+    title: 'Full-Stack Web Development: The 2024 Bootcamp',
+    instructor: 'Sarah Jenkins',
+    hours: '40 Hrs',
+    students: '12,540 Students',
   },
   {
+    slug: 'complete-uiux-design-essentials',
     img: course3,
-    price: 'INR 15,999/',
+    price: '₹799',
     rating: 5,
-    reviews: 287,
-    title: 'Japanese Language & Culture Certification',
-    instructor: 'Kenny',
-    hours: '89 Hrs',
-    students: '40 Students',
+    reviews: 4240,
+    title: 'Complete UI/UX Design Essentials: Figma to Studio',
+    instructor: 'Alex Rivera',
+    hours: '28 Hrs',
+    students: '11,320 Students',
   },
 ]
 
@@ -69,8 +72,8 @@ export default function PopularCourses() {
               <div className="course-img-wrap">
                 <img src={c.img} alt={c.title} />
                 <div className="course-overlay">
-                  <NavLink to="/courses" className="btn-sm-primary">Read More</NavLink>
-                  <NavLink to="/enroll" className="btn-sm-primary">Join Now</NavLink>
+                  <Link to={`/courses/${c.slug}`} className="btn-sm-primary">View Course</Link>
+                  <Link to="/enroll" className="btn-sm-primary">Join Now</Link>
                 </div>
               </div>
               <div className="course-body">

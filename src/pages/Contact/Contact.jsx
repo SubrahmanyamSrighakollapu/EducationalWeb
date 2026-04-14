@@ -6,9 +6,9 @@ import Animate from '../../components/Animate'
 import './Contact.css'
 
 const infoCards = [
-  { icon: <MdLocationOn />, title: 'Our Location',   lines: ['123 Skill Street, Hyderabad,', 'Telangana – 500001, India'],       color: '#03adfc' },
+  { icon: <MdLocationOn />, title: 'Our Location',   lines: ['123 Skill Street, Hyderabad,', 'Telangana – 500001, India'],       color: 'rgba(36, 89, 159, 1)' },
   { icon: <MdPhone />,      title: 'Phone Number',   lines: ['+91 98765 43210', '+91 91234 56789'],                               color: '#6c63ff' },
-  { icon: <MdEmail />,      title: 'Email Address',  lines: ['info@paybharathskill.com', 'support@paybharathskill.com'],          color: '#ff6b6b' },
+  { icon: <MdEmail />,      title: 'Email Address',  lines: ['info@educationalweb.com', 'support@educationalweb.com'],          color: '#ff6b6b' },
   { icon: <MdAccessTime />, title: 'Working Hours',  lines: ['Mon – Sat: 9:00 AM – 6:00 PM', 'Sunday: Closed'],                  color: '#f7b731' },
 ]
 
@@ -107,7 +107,7 @@ export default function Contact() {
 
             <div className="map-frame">
               <iframe
-                title="Pay Bharath Skill Education Location"
+                title="Education Web Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3305!2d78.4867!3d17.3850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzA2LjAiTiA3OMKwMjknMTIuMiJF!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
                 height="300"

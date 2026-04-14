@@ -12,10 +12,10 @@ export default function useInView(options = {}) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true)
-          observer.unobserve(el) // animate once
+          observer.unobserve(entry.target)
         }
       },
-      { threshold: 0.12, ...options }
+      { threshold: 0.05, ...options }
     )
 
     observer.observe(el)

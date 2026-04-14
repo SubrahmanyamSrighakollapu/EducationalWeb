@@ -24,14 +24,14 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2.5px;
-  color: #03adfc;
+  color: rgba(36, 89, 159, 1);
   text-transform: uppercase;
 }
 .tag-line-h {
   display: block;
   width: 36px;
   height: 2px;
-  background: #03adfc;
+  background: rgba(36, 89, 159, 1);
 }
 .section-header h2 {
   font-size: clamp(26px, 3vw, 38px);

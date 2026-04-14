@@ -16,9 +16,9 @@
 }
 .section-tag-center span:not(.tag-line-h) {
   font-size: 12px; font-weight: 700; letter-spacing: 2.5px;
-  color: #03adfc; text-transform: uppercase;
+  color: rgba(36, 89, 159, 1); text-transform: uppercase;
 }
-.tag-line-h { display: block; width: 36px; height: 2px; background: #03adfc; }
+.tag-line-h { display: block; width: 36px; height: 2px; background: rgba(36, 89, 159, 1); }
 .section-header h2 {
   font-size: clamp(26px, 3vw, 38px); font-weight: 800; color: #1a1a2e; margin: 0;
 }
@@ -68,7 +68,7 @@
 
 .btn-sm-primary {
   flex: 1;
-  background: #03adfc;
+  background: rgba(36, 89, 159, 1);
   color: #fff;
   text-decoration: none;
   font-size: 13px;
@@ -103,7 +103,7 @@
 }
 .stars { display: flex; gap: 2px; }
 .star { font-size: 13px; color: #ddd; }
-.star.filled { color: #03adfc; }
+.star.filled { color: rgba(36, 89, 159, 1); }
 .course-rating span { font-size: 12px; color: #888; }
 .course-title {
   font-size: 14.5px;
@@ -127,7 +127,7 @@
   font-size: 12px;
   color: #666;
 }
-.course-meta svg { color: #03adfc; font-size: 11px; }
+.course-meta svg { color: rgba(36, 89, 159, 1); font-size: 11px; }
 
 @media (max-width: 900px) {
   .courses-grid { grid-template-columns: repeat(2, 1fr); }
