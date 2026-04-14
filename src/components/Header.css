@@ -187,6 +187,75 @@
   border: 1.5px solid #fff;
 }
 
+/* ── User menu ───────────────────────────────── */
+.header-user-menu {
+  position: relative;
+}
+.header-user-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1.5px solid #e8edf3;
+  border-radius: 10px;
+  padding: 5px 12px 5px 5px;
+  cursor: pointer;
+  transition: border-color 0.18s;
+  font-family: inherit;
+}
+.header-user-btn:hover { border-color: var(--primary); }
+.header-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-user-name {
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.header-user-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(36,89,159,0.13);
+  min-width: 180px;
+  overflow: hidden;
+  display: none;
+  z-index: 200;
+}
+.header-user-menu:hover .header-user-dropdown { display: block; }
+.hud-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+.hud-item:hover { background: #f0f4ff; color: var(--primary); }
+.hud-logout { color: #ff6b6b; }
+.hud-logout:hover { background: #fff0f0; color: #ff6b6b; }
+
 /* ── Join Now CTA ─────────────────────────────────── */
 .join-btn {
   display: flex;
