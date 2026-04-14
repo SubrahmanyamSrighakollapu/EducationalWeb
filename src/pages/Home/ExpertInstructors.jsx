@@ -42,6 +42,7 @@ export default function ExpertInstructors() {
                 <h4>{ins.name}</h4>
                 <p>{ins.role}</p>
               </div>
+              </div>
             </Animate>
           ))}
         </div>

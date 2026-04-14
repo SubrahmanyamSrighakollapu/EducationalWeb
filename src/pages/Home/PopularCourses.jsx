@@ -86,6 +86,7 @@ export default function PopularCourses() {
                 <span><FaClock /> {c.hours}</span>
                 <span><FaUsers /> {c.students}</span>
               </div>
+              </div>
             </Animate>
           ))}
         </div>
