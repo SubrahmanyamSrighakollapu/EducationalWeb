@@ -45,7 +45,6 @@ export default function ExpertInstructors() {
                   <span className="instructor-tag">{ins.tag}</span>
                 </div>
               </div>
-              </div>
             </Animate>
           ))}
         </div>

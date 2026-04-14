@@ -28,7 +28,7 @@
   gap: 10px;
   text-decoration: none;
 }
-.asb-logo img { height: 38px; width: auto; filter: brightness(0) invert(1); }
+.asb-logo img { height: 100px; width: auto; filter: brightness(0) invert(1); }
 .asb-logo-badge {
   font-size: 0.62rem;
   font-weight: 700;

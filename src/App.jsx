@@ -25,6 +25,8 @@ import RefundPolicy from './pages/Legal/RefundPolicy'
 // Auth pages
 import Login from './pages/Auth/Login'
 import Signup from './pages/Auth/Signup'
+import StudentLogin from './pages/Auth/StudentLogin'
+import AdminLogin from './pages/Auth/AdminLogin'
 
 // Dashboard layouts
 import AdminLayout from './layouts/AdminLayout'
@@ -92,8 +94,11 @@ function AppRoutes() {
       <Route path="/refund-policy" element={<MarketingLayout><RefundPolicy /></MarketingLayout>} />
 
       {/* ── Auth (no Header/Footer) ── */}
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<StudentLogin />} />
+      <Route path="/signup" element={<StudentLogin />} />
+      <Route path="/admin-login" element={<AdminLogin />} />
+      {/* legacy routes kept for backward compat */}
+      <Route path="/login-legacy" element={<Login />} />
 
       {/* ── Admin Dashboard ── */}
       <Route path="/admin" element={<AdminLayout />}>
