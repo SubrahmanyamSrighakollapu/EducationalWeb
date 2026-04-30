@@ -1,15 +1,24 @@
 import { useState } from 'react'
 import { MdLocationOn, MdPhone, MdEmail, MdAccessTime, MdSend } from 'react-icons/md'
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa'
 import PageBanner from '../../components/PageBanner'
 import Animate from '../../components/Animate'
 import './Contact.css'
 
+const SOCIALS = [
+  { icon: <FaFacebookF />,  href: 'https://www.facebook.com/profile.php?id=61589123604776', label: 'Facebook' },
+  { icon: <FaTwitter />,    href: 'https://x.com/tutershub',                                  label: 'Twitter / X' },
+  { icon: <FaInstagram />,  href: 'https://www.instagram.com/tutershub/',                     label: 'Instagram' },
+  { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/in/tuters-hub-b42b84406/',        label: 'LinkedIn' },
+  { icon: <FaYoutube />,    href: 'https://www.youtube.com/@tutershub',                       label: 'YouTube' },
+]
+
 const infoCards = [
-  { icon: <MdLocationOn />, title: 'Our Location',   lines: ['123 Skill Street, Hyderabad,', 'Telangana – 500001, India'],       color: 'rgba(36, 89, 159, 1)' },
-  { icon: <MdPhone />,      title: 'Phone Number',   lines: ['+91 98765 43210', '+91 91234 56789'],                               color: '#6c63ff' },
-  { icon: <MdEmail />,      title: 'Email Address',  lines: ['info@educationalweb.com', 'support@educationalweb.com'],          color: '#ff6b6b' },
-  { icon: <MdAccessTime />, title: 'Working Hours',  lines: ['Mon – Sat: 9:00 AM – 6:00 PM', 'Sunday: Closed'],                  color: '#f7b731' },
+  { icon: <MdLocationOn />, title: 'Branch 1 – Tiruvuru',     lines: ['Shop No: 12, MPP Tiruvuru Shopping Complex,', 'Tiruvuru – 521235'],                                              color: 'rgba(36, 89, 159, 1)' },
+  { icon: <MdLocationOn />, title: 'Branch 2 – Visakhapatnam', lines: ['MIG 151, A-zone, Sujatha Nagar,', 'Pendurthi Mandal, Visakhapatnam – 530051'],                              color: '#6c63ff' },
+  { icon: <MdPhone />,      title: 'Phone Number',             lines: ['+91 92814 41011'],                                                                                            color: '#26de81' },
+  { icon: <MdEmail />,      title: 'Email Address',            lines: ['Tutershub@gmail.com'],                                                                                       color: '#ff6b6b' },
+  { icon: <MdAccessTime />, title: 'Working Hours',            lines: ['Mon – Sat: 9:00 AM – 6:00 PM', 'Sunday: Closed'],                                                            color: '#f7b731' },
 ]
 
 export default function Contact() {
@@ -121,10 +130,9 @@ export default function Contact() {
             <div className="social-connect">
               <h4>Connect With Us</h4>
               <div className="contact-socials">
-                <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-                <a href="#" aria-label="Twitter"><FaTwitter /></a>
-                <a href="#" aria-label="Instagram"><FaInstagram /></a>
-                <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+                {SOCIALS.map(s => (
+                  <a key={s.label} href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}>{s.icon}</a>
+                ))}
               </div>
             </div>
           </Animate>
