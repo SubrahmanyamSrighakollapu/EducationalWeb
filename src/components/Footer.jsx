@@ -19,11 +19,11 @@ export default function Footer() {
               Empowering learners with industry-ready skills. Join thousands of students building their future with us.
             </p>
             <div className="social-links">
-              <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-              <a href="#" aria-label="Twitter"><FaTwitter /></a>
-              <a href="#" aria-label="Instagram"><FaInstagram /></a>
-              <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
-              <a href="#" aria-label="YouTube"><FaYoutube /></a>
+              <a href="https://www.facebook.com/profile.php?id=61589123604776" target="_blank" rel="noreferrer" aria-label="Facebook"><FaFacebookF /></a>
+              <a href="https://x.com/tutershub" target="_blank" rel="noreferrer" aria-label="Twitter"><FaTwitter /></a>
+              <a href="https://www.instagram.com/tutershub/" target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/in/tuters-hub-b42b84406/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
+              <a href="https://www.youtube.com/@tutershub" target="_blank" rel="noreferrer" aria-label="YouTube"><FaYoutube /></a>
             </div>
           </div>
 
@@ -55,9 +55,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Contact Us</h4>
             <ul className="contact-list">
-              <li><MdLocationOn /><span>Shop No: 12, MPP Tiruvuru Shopping Complex, Tiruvuru - 521235</span></li>
-              <li><MdPhone /><span>+91 9281441011</span></li>
-              <li><MdEmail /><span>info@educationalweb.com</span></li>
+              <li><MdLocationOn /><span>Shop No: 12, MPP Tiruvuru Shopping Complex, Tiruvuru – 521235</span></li>
+              <li><MdLocationOn /><span>MIG 151, A-zone, Sujatha Nagar, Pendurthi Mandal, Visakhapatnam – 530051</span></li>
+              <li><MdPhone /><span>+91 92814 41011</span></li>
+              <li><MdEmail /><span>Tutershub@gmail.com</span></li>
             </ul>
           </div>
 
