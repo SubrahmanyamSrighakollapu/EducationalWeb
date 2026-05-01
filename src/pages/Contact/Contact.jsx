@@ -117,7 +117,7 @@ export default function Contact() {
             <div className="map-frame">
               <iframe
                 title="Education Web Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3305!2d78.4867!3d17.3850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzA2LjAiTiA3OMKwMjknMTIuMiJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.0!2d83.1850!3d17.8500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMIG+151%2C+A-zone%2C+Sujatha+Nagar%2C+Pendurthi+Mandal%2C+Visakhapatnam%2C+Andhra+Pradesh+530051!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
