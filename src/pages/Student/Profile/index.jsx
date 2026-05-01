@@ -6,7 +6,7 @@ import { useStudent } from '../../../context/StudentContext'
 export default function StudentProfile() {
   const { user } = useAuth()
   const { enrolledCourses, inProgress, completed } = useStudent()
-  const [form, setForm] = useState({ name: user?.name || 'Student', email: user?.email || 'student@educationweb.in', phone: '+91 98765 43210', location: 'Hyderabad, Telangana', bio: 'Passionate learner exploring technology and business courses to advance my career.' })
+  const [form, setForm] = useState({ name: user?.name || 'Student', email: user?.email || 'student@educationweb.in', phone: '+91 9281441011', location: 'Hyderabad, Telangana', bio: 'Passionate learner exploring technology and business courses to advance my career.' })
   const [pwd,  setPwd]  = useState({ current: '', newPwd: '', confirm: '' })
   const [saved, setSaved] = useState(false)
 

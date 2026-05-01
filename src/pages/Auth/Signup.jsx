@@ -146,7 +146,7 @@ export default function Signup() {
               <label>Phone Number <span style={{ color: '#aab4c4', fontWeight: 400 }}>(optional)</span></label>
               <div className="auth-input-wrap">
                 <FiPhone className="auth-input-icon" />
-                <input className="auth-input" type="tel" placeholder="+91 98765 43210" value={form.phone} onChange={set('phone')} />
+                <input className="auth-input" type="tel" placeholder="+91 9281441011" value={form.phone} onChange={set('phone')} />
               </div>
             </div>
 

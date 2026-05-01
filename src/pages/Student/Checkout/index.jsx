@@ -78,7 +78,7 @@ export default function StudentCheckout() {
                 </div>
                 <div className="form-field">
                   <label>Phone Number</label>
-                  <input className="form-input" placeholder="+91 98765 43210" value={billing.phone} onChange={set('phone')} />
+                  <input className="form-input" placeholder="+91 9281441011" value={billing.phone} onChange={set('phone')} />
                 </div>
                 <div className="form-field span-2">
                   <label>Address</label>

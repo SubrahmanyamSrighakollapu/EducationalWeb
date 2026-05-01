@@ -142,7 +142,7 @@ export default function AdminStudents() {
                 </div>
                 <div className="form-field">
                   <label>Phone Number</label>
-                  <input className="form-input" placeholder="+91 98765 43210" value={form.phone} onChange={set('phone')} />
+                  <input className="form-input" placeholder="+91 9281441011" value={form.phone} onChange={set('phone')} />
                 </div>
                 {modal === 'add' && (
                   <div className="form-field span-2">

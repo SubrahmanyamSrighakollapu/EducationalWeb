@@ -55,8 +55,8 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Contact Us</h4>
             <ul className="contact-list">
-              <li><MdLocationOn /><span>123 Skill Street, Hyderabad, Telangana 500001</span></li>
-              <li><MdPhone /><span>+91 98765 43210</span></li>
+              <li><MdLocationOn /><span>Shop No: 12, MPP Tiruvuru Shopping Complex, Tiruvuru - 521235</span></li>
+              <li><MdPhone /><span>+91 9281441011</span></li>
               <li><MdEmail /><span>info@educationalweb.com</span></li>
             </ul>
           </div>

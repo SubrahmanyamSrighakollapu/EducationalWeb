@@ -6,8 +6,8 @@ import Animate from '../../components/Animate'
 import './Contact.css'
 
 const infoCards = [
-  { icon: <MdLocationOn />, title: 'Our Location',   lines: ['123 Skill Street, Hyderabad,', 'Telangana – 500001, India'],       color: 'rgba(36, 89, 159, 1)' },
-  { icon: <MdPhone />,      title: 'Phone Number',   lines: ['+91 98765 43210', '+91 91234 56789'],                               color: '#6c63ff' },
+  { icon: <MdLocationOn />, title: 'Our Location',   lines: ['Shop No: 12, MPP Tiruvuru Shopping', 'Complex, Tiruvuru - 521235, India'],       color: 'rgba(36, 89, 159, 1)' },
+  { icon: <MdPhone />,      title: 'Phone Number',   lines: ['+91 9281441011'],                               color: '#6c63ff' },
   { icon: <MdEmail />,      title: 'Email Address',  lines: ['info@educationalweb.com', 'support@educationalweb.com'],          color: '#ff6b6b' },
   { icon: <MdAccessTime />, title: 'Working Hours',  lines: ['Mon – Sat: 9:00 AM – 6:00 PM', 'Sunday: Closed'],                  color: '#f7b731' },
 ]

@@ -4,7 +4,7 @@ import { COURSES } from '../data/courses'
 const AdminContext = createContext(null)
 
 const INIT_STUDENTS = [
-  { id: 1, name: 'Rahul Sharma',   email: 'rahul@gmail.com',   phone: '+91 98765 43210', enrolledCourses: [1, 2], joinDate: '2024-01-15', status: 'active',   avatar: '' },
+  { id: 1, name: 'Rahul Sharma',   email: 'rahul@gmail.com',   phone: '+91 9281441011', enrolledCourses: [1, 2], joinDate: '2024-01-15', status: 'active',   avatar: '' },
   { id: 2, name: 'Priya Mehta',    email: 'priya@gmail.com',   phone: '+91 87654 32109', enrolledCourses: [3],    joinDate: '2024-02-20', status: 'active',   avatar: '' },
   { id: 3, name: 'Arjun Nair',     email: 'arjun@gmail.com',   phone: '+91 76543 21098', enrolledCourses: [1, 4], joinDate: '2024-03-10', status: 'inactive', avatar: '' },
   { id: 4, name: 'Sneha Patel',    email: 'sneha@gmail.com',   phone: '+91 65432 10987', enrolledCourses: [5, 6], joinDate: '2024-04-05', status: 'active',   avatar: '' },

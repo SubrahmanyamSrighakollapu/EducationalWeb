@@ -177,7 +177,7 @@ function SignupForm() {
         <label>Phone <span className="sa-optional">(optional)</span></label>
         <div className="sa-input-wrap">
           <FiPhone className="sa-input-icon" />
-          <input className="sa-input" type="tel" placeholder="+91 98765 43210"
+          <input className="sa-input" type="tel" placeholder="+91 9281441011"
             value={form.phone} onChange={set('phone')} />
         </div>
       </div>

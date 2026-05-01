@@ -4,7 +4,7 @@ import { useAuth } from '../../../context/auth/AuthContext'
 
 export default function AdminProfile() {
   const { user } = useAuth()
-  const [form, setForm] = useState({ name: user?.name || 'Admin User', email: user?.email || 'admin@educationweb.in', phone: '+91 98765 43210', location: 'Hyderabad, Telangana', bio: 'Platform administrator managing courses, students, and overall operations of Education Web.' })
+  const [form, setForm] = useState({ name: user?.name || 'Admin User', email: user?.email || 'admin@educationweb.in', phone: '+91 9281441011', location: 'Hyderabad, Telangana', bio: 'Platform administrator managing courses, students, and overall operations of Education Web.' })
   const [pwd,  setPwd]  = useState({ current: '', newPwd: '', confirm: '' })
   const [saved, setSaved] = useState(false)
 
