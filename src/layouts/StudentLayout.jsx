@@ -11,6 +11,7 @@ const PAGE_TITLES = {
   '/student/cart':        'My Cart',
   '/student/wishlist':    'My Wishlist',
   '/student/checkout':    'Checkout',
+  '/student/tutors':     'Tutors & Institutes',
   '/student/profile':     'My Profile',
 }
 

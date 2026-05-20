@@ -5,6 +5,8 @@ import { useEffect } from 'react'
 import { StoreProvider } from './context/StoreContext'
 import { AuthProvider } from './context/auth/AuthContext'
 import { StudentProvider } from './context/StudentContext'
+import { AdminProvider } from './context/AdminContext'
+import { TutorProvider } from './context/TutorContext'
 
 // Marketing site layout
 import Header from './components/Header'
@@ -39,6 +41,8 @@ import AdminStudents from './pages/Admin/Students'
 import AdminProfile from './pages/Admin/Profile'
 import AdminReports from './pages/Admin/Reports'
 import AdminSettings from './pages/Admin/Settings'
+import AdminRefunds from './pages/Admin/Refunds'
+import AdminTutors from './pages/Admin/Tutors'
 
 // Student pages
 import StudentDashboard from './pages/Student/Dashboard'
@@ -49,6 +53,7 @@ import StudentCart from './pages/Student/Cart'
 import StudentWishlist from './pages/Student/Wishlist'
 import StudentCheckout from './pages/Student/Checkout'
 import StudentProfile from './pages/Student/Profile'
+import StudentTutors from './pages/Student/Tutors'
 
 import './App.css'
 import './styles/animate.css'
@@ -105,6 +110,8 @@ function AppRoutes() {
         <Route index element={<AdminDashboard />} />
         <Route path="courses" element={<AdminCourses />} />
         <Route path="students" element={<AdminStudents />} />
+        <Route path="refunds" element={<AdminRefunds />} />
+        <Route path="tutors" element={<AdminTutors />} />
         <Route path="reports" element={<AdminReports />} />
         <Route path="profile" element={<AdminProfile />} />
         <Route path="settings" element={<AdminSettings />} />
@@ -119,6 +126,7 @@ function AppRoutes() {
         <Route path="cart" element={<StudentCart />} />
         <Route path="wishlist" element={<StudentWishlist />} />
         <Route path="checkout" element={<StudentCheckout />} />
+        <Route path="tutors" element={<StudentTutors />} />
         <Route path="profile" element={<StudentProfile />} />
       </Route>
 
@@ -130,11 +138,15 @@ export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <StoreProvider>
-          <StudentProvider>
-            <AppRoutes />
-          </StudentProvider>
-        </StoreProvider>
+        <AdminProvider>
+          <TutorProvider>
+            <StoreProvider>
+              <StudentProvider>
+                <AppRoutes />
+              </StudentProvider>
+            </StoreProvider>
+          </TutorProvider>
+        </AdminProvider>
       </AuthProvider>
     </BrowserRouter>
   )

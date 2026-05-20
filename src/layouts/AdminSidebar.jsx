@@ -1,27 +1,53 @@
 import { NavLink, useNavigate } from 'react-router-dom'
-import { FiGrid, FiBookOpen, FiUsers, FiUser, FiLogOut, FiBarChart2, FiSettings } from 'react-icons/fi'
+import { FiGrid, FiBookOpen, FiUsers, FiUser, FiLogOut, FiBarChart2, FiSettings, FiRefreshCw, FiAward } from 'react-icons/fi'
 import { useAuth } from '../context/auth/AuthContext'
 import { useAdmin } from '../context/AdminContext'
+import { useTutor } from '../context/TutorContext'
 import logoImg from '../assets/logo.png'
 import '../layouts/Dashboard.css'
 
-const NAV = [
-  { to: '/admin',          icon: <FiGrid />,      label: 'Dashboard',  end: true },
-  { to: '/admin/courses',  icon: <FiBookOpen />,  label: 'Courses',    badge: 'courses' },
-  { to: '/admin/students', icon: <FiUsers />,     label: 'Students',   badge: 'students' },
-  { to: '/admin/reports',  icon: <FiBarChart2 />, label: 'Reports' },
-  { to: '/admin/profile',  icon: <FiUser />,      label: 'Profile' },
-  { to: '/admin/settings', icon: <FiSettings />,  label: 'Settings' },
-]
-
 export default function AdminSidebar({ collapsed }) {
   const { logout } = useAuth()
-  const { courses, students } = useAdmin()
+  const { courses, students, refundRequests } = useAdmin()
+  const { requests: tutorRequests } = useTutor()
   const navigate = useNavigate()
 
-  const counts = { courses: courses.length, students: students.length }
+  const pendingRefunds = refundRequests?.filter(r => r.status === 'pending').length || 0
+  const pendingTutors  = tutorRequests?.filter(r => r.status === 'pending').length || 0
+  const counts = { courses: courses.length, students: students.length, refunds: pendingRefunds, tutors: pendingTutors }
 
   const handleLogout = () => { logout(); navigate('/login') }
+
+  const MAIN_NAV = [
+    { to: '/admin',          icon: <FiGrid />,      label: 'Dashboard',           end: true },
+    { to: '/admin/courses',  icon: <FiBookOpen />,  label: 'Courses',             badge: 'courses' },
+    { to: '/admin/students', icon: <FiUsers />,     label: 'Students',            badge: 'students' },
+    { to: '/admin/refunds',  icon: <FiRefreshCw />, label: 'Refunds',             badge: 'refunds' },
+    { to: '/admin/tutors',   icon: <FiAward />,     label: 'Tutors / Institutes', badge: 'tutors' },
+  ]
+  const ANALYTICS_NAV = [
+    { to: '/admin/reports',  icon: <FiBarChart2 />, label: 'Reports' },
+  ]
+  const ACCOUNT_NAV = [
+    { to: '/admin/profile',  icon: <FiUser />,      label: 'Profile' },
+    { to: '/admin/settings', icon: <FiSettings />,  label: 'Settings' },
+  ]
+
+  const renderLink = (item) => (
+    <NavLink key={item.to} to={item.to} end={item.end}
+      className={({ isActive }) => `asb-link${isActive ? ' active' : ''}`}>
+      {item.icon}
+      <span>{item.label}</span>
+      {item.badge && counts[item.badge] > 0 && (
+        <span className="asb-badge"
+          style={item.badge === 'refunds' || item.badge === 'tutors'
+            ? { background: 'rgba(255,107,107,0.3)', color: '#ff9999' }
+            : {}}>
+          {counts[item.badge]}
+        </span>
+      )}
+    </NavLink>
+  )
 
   return (
     <aside className={`admin-sidebar${collapsed ? ' collapsed' : ''}`}>
@@ -32,29 +58,13 @@ export default function AdminSidebar({ collapsed }) {
 
       <nav className="asb-nav">
         <div className="asb-section-label">Main Menu</div>
-        {NAV.slice(0, 3).map(item => (
-          <NavLink key={item.to} to={item.to} end={item.end} className={({ isActive }) => `asb-link${isActive ? ' active' : ''}`}>
-            {item.icon}
-            <span>{item.label}</span>
-            {item.badge && counts[item.badge] > 0 && (
-              <span className="asb-badge">{counts[item.badge]}</span>
-            )}
-          </NavLink>
-        ))}
+        {MAIN_NAV.map(renderLink)}
 
         <div className="asb-section-label" style={{ marginTop: 8 }}>Analytics</div>
-        {NAV.slice(3, 4).map(item => (
-          <NavLink key={item.to} to={item.to} className={({ isActive }) => `asb-link${isActive ? ' active' : ''}`}>
-            {item.icon}<span>{item.label}</span>
-          </NavLink>
-        ))}
+        {ANALYTICS_NAV.map(renderLink)}
 
         <div className="asb-section-label" style={{ marginTop: 8 }}>Account</div>
-        {NAV.slice(4).map(item => (
-          <NavLink key={item.to} to={item.to} className={({ isActive }) => `asb-link${isActive ? ' active' : ''}`}>
-            {item.icon}<span>{item.label}</span>
-          </NavLink>
-        ))}
+        {ACCOUNT_NAV.map(renderLink)}
       </nav>
 
       <div className="asb-bottom">

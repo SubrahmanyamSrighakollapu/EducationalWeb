@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom'
-import { FiGrid, FiBookOpen, FiList, FiShoppingCart, FiHeart, FiUser, FiLogOut } from 'react-icons/fi'
+import { FiGrid, FiBookOpen, FiList, FiShoppingCart, FiHeart, FiUser, FiLogOut, FiUsers } from 'react-icons/fi'
 import { useAuth } from '../context/auth/AuthContext'
 import { useStore } from '../context/StoreContext'
 import { useStudent } from '../context/StudentContext'
@@ -20,6 +20,7 @@ export default function StudentSidebar({ collapsed }) {
     { to: '/student/my-courses', icon: <FiList />,        label: 'My Courses',      count: enrolledCourses.length },
     { to: '/student/cart',       icon: <FiShoppingCart />,label: 'Cart',            count: cart.length },
     { to: '/student/wishlist',   icon: <FiHeart />,       label: 'Wishlist',        count: wishlist.length },
+    { to: '/student/tutors',    icon: <FiUsers />,       label: 'Tutors / Institutes' },
     { to: '/student/profile',    icon: <FiUser />,        label: 'Profile' },
   ]
 

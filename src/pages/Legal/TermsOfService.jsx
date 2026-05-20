@@ -8,9 +8,9 @@ const sections = [
     title: 'Acceptance of Terms',
     content: (
       <>
-        <p>By accessing or using the Education Web platform, website, or any of our services, you agree to be bound by these Terms of Service. Please read them carefully before enrolling in any course or creating an account.</p>
+        <p>By accessing or using the Fly Byte Digital Technologies Private Limited platform, website, or any of our services, you agree to be bound by these Terms of Service. Please read them carefully before enrolling in any course or creating an account.</p>
         <div className="legal-highlight">
-          If you do not agree to these terms, please do not use our platform. Continued use of Education Web constitutes your acceptance of any updates to these terms.
+          If you do not agree to these terms, please do not use our platform. Continued use of Fly Byte Digital Technologies Private Limited constitutes your acceptance of any updates to these terms.
         </div>
         <p>These terms apply to all users including students, instructors, and visitors. We reserve the right to update these terms at any time with reasonable notice provided via email or platform notification.</p>
       </>
@@ -21,14 +21,14 @@ const sections = [
     title: 'Course Enrolment & Access',
     content: (
       <>
-        <p>When you enrol in a course on Education Web, the following terms apply to your access and usage:</p>
+        <p>When you enrol in a course on Fly Byte Digital Technologies Private Limited, the following terms apply to your access and usage:</p>
         <ul>
           <li>Upon successful payment, you receive lifetime access to the enrolled course content</li>
           <li>Course access is granted to the individual account holder only and is non-transferable</li>
           <li>You may access course materials on any device using your registered account credentials</li>
           <li>Downloading course videos for offline viewing is permitted only through our official app</li>
           <li>Sharing login credentials or course content with others is strictly prohibited</li>
-          <li>Education Web reserves the right to update course content to keep it current and accurate</li>
+          <li>Fly Byte Digital Technologies Private Limited reserves the right to update course content to keep it current and accurate</li>
         </ul>
       </>
     ),
@@ -38,7 +38,7 @@ const sections = [
     title: 'Payments & Billing',
     content: (
       <>
-        <p>All payments on Education Web are processed securely. The following terms govern all financial transactions:</p>
+        <p>All payments on Fly Byte Digital Technologies Private Limited are processed securely. The following terms govern all financial transactions:</p>
         <ul>
           <li>Course prices are displayed in Indian Rupees (INR) and are inclusive of applicable taxes</li>
           <li>Payments are processed through Razorpay and PayU — both PCI-DSS compliant gateways</li>
@@ -55,16 +55,16 @@ const sections = [
     title: 'Certificates & Intellectual Property',
     content: (
       <>
-        <p>Education Web issues certificates of completion to students who successfully finish a course. The following terms apply:</p>
+        <p>Fly Byte Digital Technologies Private Limited issues certificates of completion to students who successfully finish a course. The following terms apply:</p>
         <ul>
           <li>Certificates are issued digitally upon completing all required modules and assessments</li>
           <li>Certificates are for personal use and may be shared on LinkedIn or included in resumes</li>
-          <li>All course content including videos, PDFs, quizzes, and materials are owned by Education Web or respective instructors</li>
+          <li>All course content including videos, PDFs, quizzes, and materials are owned by Fly Byte Digital Technologies Private Limited or respective instructors</li>
           <li>You may not reproduce, distribute, or sell any course content without written permission</li>
           <li>Screen recording or unauthorised copying of course materials is a violation of these terms</li>
         </ul>
         <div className="legal-highlight">
-          Certificates issued by Education Web are recognised by our industry partners. They are not equivalent to formal university degrees unless explicitly stated.
+          Certificates issued by Fly Byte Digital Technologies Private Limited are recognised by our industry partners. They are not equivalent to formal university degrees unless explicitly stated.
         </div>
       </>
     ),
@@ -96,7 +96,7 @@ const sections = [
         <p>Either party may terminate the user account under the following circumstances:</p>
         <ul>
           <li>You may delete your account at any time from your account settings</li>
-          <li>Education Web may suspend or terminate accounts that violate these terms</li>
+          <li>Fly Byte Digital Technologies Private Limited may suspend or terminate accounts that violate these terms</li>
           <li>Upon termination, access to enrolled courses will be revoked</li>
           <li>Refunds upon termination are subject to our Refund Policy</li>
           <li>We reserve the right to retain certain data as required by law even after account deletion</li>
@@ -113,7 +113,7 @@ export default function TermsOfService() {
       <div className="legal-hero">
         <div className="legal-hero-tag"><FiFileText /> Legal</div>
         <h1>Terms of Service</h1>
-        <p>These terms govern your use of the Education Web platform. By using our services, you agree to these terms in full.</p>
+        <p>These terms govern your use of the Fly Byte Digital Technologies Private Limited platform. By using our services, you agree to these terms in full.</p>
         <div className="legal-hero-meta"><FiCalendar /> Last updated: January 1, 2025</div>
       </div>
 

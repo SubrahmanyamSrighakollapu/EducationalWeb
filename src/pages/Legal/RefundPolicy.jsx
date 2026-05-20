@@ -8,7 +8,7 @@ const sections = [
     title: '7-Day Money-Back Guarantee',
     content: (
       <>
-        <p>At Education Web, we stand behind the quality of every course we offer. That is why we provide a <strong>7-day money-back guarantee</strong> on all course purchases — no questions asked.</p>
+        <p>At Fly Byte Digital Technologies Private Limited, we stand behind the quality of every course we offer. That is why we provide a <strong>7-day money-back guarantee</strong> on all course purchases — no questions asked.</p>
         <div className="legal-highlight">
           If you are not completely satisfied with your course within 7 days of purchase, contact us at refunds@educationweb.in and we will process a full refund to your original payment method.
         </div>
@@ -31,7 +31,7 @@ const sections = [
           <li>The refund request is submitted within 7 days of the original purchase date</li>
           <li>Less than 30% of the course content has been consumed or completed</li>
           <li>The course certificate has not been downloaded or issued</li>
-          <li>The purchase was made directly through the Education Web platform</li>
+          <li>The purchase was made directly through the Fly Byte Digital Technologies Private Limited platform</li>
           <li>The account has not previously received a refund for the same course</li>
         </ul>
         <h3>Non-Refundable Situations</h3>
@@ -64,10 +64,10 @@ const sections = [
   },
   {
     icon: <FiXCircle />,
-    title: 'Course Cancellations by Education Web',
+    title: 'Course Cancellations by Fly Byte Digital Technologies Private Limited',
     content: (
       <>
-        <p>In rare circumstances, Education Web may need to cancel or discontinue a course. In such cases:</p>
+        <p>In rare circumstances, Fly Byte Digital Technologies Private Limited may need to cancel or discontinue a course. In such cases:</p>
         <ul>
           <li>All enrolled students will receive a full refund regardless of course completion percentage</li>
           <li>Students will be notified via email at least 14 days before the course is discontinued</li>
@@ -104,7 +104,7 @@ const sections = [
           <li>Email our escalation team at disputes@educationweb.in with your case reference number</li>
           <li>Escalated cases are reviewed by a senior team member within 3 business days</li>
           <li>If unresolved, disputes may be referred to the Consumer Disputes Redressal Forum under the Consumer Protection Act, 2019</li>
-          <li>Education Web is committed to resolving all disputes amicably and in good faith</li>
+          <li>Fly Byte Digital Technologies Private Limited is committed to resolving all disputes amicably and in good faith</li>
         </ul>
         <div className="legal-highlight">
           Our goal is 100% student satisfaction. If a course did not meet your expectations, we want to know — your feedback helps us improve.

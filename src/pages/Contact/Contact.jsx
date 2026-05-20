@@ -14,8 +14,8 @@ const SOCIALS = [
 ]
 
 const infoCards = [
-  { icon: <MdLocationOn />, title: 'Branch 1 – Tiruvuru',     lines: ['Shop No: 12, MPP Tiruvuru Shopping Complex,', 'Tiruvuru – 521235'],                                              color: 'rgba(36, 89, 159, 1)' },
-  { icon: <MdLocationOn />, title: 'Branch 2 – Visakhapatnam', lines: ['MIG 151, A-zone, Sujatha Nagar,', 'Pendurthi Mandal, Visakhapatnam – 530051'],                              color: '#6c63ff' },
+  { icon: <MdLocationOn />, title: 'Branch 1 – Tiruvuru',     lines: ['Fly Byte Digital Technologies Private Limited, Shop No: 12, MPP Tiruvuru Shopping Complex,', 'Tiruvuru – 521235'],                                              color: 'rgba(36, 89, 159, 1)' },
+  { icon: <MdLocationOn />, title: 'Branch 2 – Visakhapatnam', lines: ['Fly Byte Digital Technologies Private Limited, MIG 151, A-zone, Sujatha Nagar,', 'Pendurthi Mandal, Visakhapatnam – 530051'],                              color: '#6c63ff' },
   { icon: <MdPhone />,      title: 'Phone Number',             lines: ['+91 92814 41011'],                                                                                            color: '#26de81' },
   { icon: <MdEmail />,      title: 'Email Address',            lines: ['Tutershub@gmail.com'],                                                                                       color: '#ff6b6b' },
   { icon: <MdAccessTime />, title: 'Working Hours',            lines: ['Mon – Sat: 9:00 AM – 6:00 PM', 'Sunday: Closed'],                                                            color: '#f7b731' },

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { FiBookOpen, FiUsers, FiTrendingUp, FiDollarSign, FiArrowUp, FiPlus, FiUserPlus, FiActivity, FiStar } from 'react-icons/fi'
+import { FiBookOpen, FiUsers, FiTrendingUp, FiDollarSign, FiArrowUp, FiPlus, FiUserPlus, FiActivity, FiStar, FiRefreshCw } from 'react-icons/fi'
 import { useAdmin } from '../../../context/AdminContext'
 import { useAuth } from '../../../context/auth/AuthContext'
 
@@ -12,7 +12,8 @@ const ACTIVITY = [
 ]
 
 export default function AdminDashboard() {
-  const { courses, students } = useAdmin()
+  const { courses, students, refundRequests } = useAdmin()
+  const pendingRefunds = refundRequests?.filter(r => r.status === 'pending').length || 0
   const { user } = useAuth()
   const navigate = useNavigate()
 
@@ -25,7 +26,8 @@ export default function AdminDashboard() {
     { icon: <FiBookOpen />, bg: '#e8f0ff', color: 'var(--primary)', label: 'Total Courses',   value: courses.length,  trend: `${activeCourses} active`,   up: true },
     { icon: <FiUsers />,    bg: '#e6faf2', color: '#1a9e5c',        label: 'Total Students',  value: students.length, trend: `${activeStudents} active`,   up: true },
     { icon: <FiDollarSign />,bg:'#fff8e6', color: '#f7b731',        label: 'Total Revenue',   value: `₹${(totalRevenue/1000).toFixed(0)}K`, trend: '+12% this month', up: true },
-    { icon: <FiStar />,     bg: '#f0eeff', color: '#6c63ff',        label: 'Avg. Rating',     value: avgRating,       trend: 'Across all courses',         up: true },
+    { icon: <FiStar />,       bg: '#f0eeff', color: '#6c63ff',        label: 'Avg. Rating',     value: avgRating,       trend: 'Across all courses',         up: true },
+    { icon: <FiRefreshCw />,  bg: '#fff0f0', color: '#ff6b6b',        label: 'Pending Refunds', value: pendingRefunds,  trend: 'Awaiting review',            up: false },
   ]
 
   const recentCourses  = [...courses].slice(0, 5)
@@ -46,7 +48,7 @@ export default function AdminDashboard() {
       </div>
 
       {/* Stats */}
-      <div className="admin-stats-grid">
+      <div className="admin-stats-grid" style={{ gridTemplateColumns: 'repeat(5,1fr)' }}>
         {STATS.map((s, i) => (
           <div key={i} className="stat-card">
             <div className="stat-icon" style={{ background: s.bg, color: s.color }}>{s.icon}</div>

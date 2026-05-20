@@ -55,8 +55,8 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Contact Us</h4>
             <ul className="contact-list">
-              <li><MdLocationOn /><span>Shop No: 12, MPP Tiruvuru Shopping Complex, Tiruvuru – 521235</span></li>
-              <li><MdLocationOn /><span>MIG 151, A-zone, Sujatha Nagar, Pendurthi Mandal, Visakhapatnam – 530051</span></li>
+              <li><MdLocationOn /><span>Fly Byte Digital Technologies Private Limited, Shop No: 12, MPP Tiruvuru Shopping Complex, Tiruvuru – 521235</span></li>
+              <li><MdLocationOn /><span>Fly Byte Digital Technologies Private Limited, MIG 151, A-zone, Sujatha Nagar, Pendurthi Mandal, Visakhapatnam – 530051</span></li>
               <li><MdPhone /><span>+91 92814 41011</span></li>
               <li><MdEmail /><span>Tutershub@gmail.com</span></li>
             </ul>

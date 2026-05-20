@@ -8,7 +8,7 @@ const sections = [
     title: 'Information We Collect',
     content: (
       <>
-        <p>When you register or interact with Education Web, we collect the following types of information to provide you with the best learning experience:</p>
+        <p>When you register or interact with Fly Byte Digital Technologies Private Limited, we collect the following types of information to provide you with the best learning experience:</p>
         <ul>
           <li>Full name, email address, and contact number provided during registration</li>
           <li>Profile information such as your learning goals, preferred language, and educational background</li>
@@ -93,7 +93,7 @@ const sections = [
     title: 'Your Rights & Data Deletion',
     content: (
       <>
-        <p>You have full control over your personal data. As a user of Education Web, you have the right to:</p>
+        <p>You have full control over your personal data. As a user of Fly Byte Digital Technologies Private Limited, you have the right to:</p>
         <ul>
           <li>Access a copy of all personal data we hold about you</li>
           <li>Correct inaccurate or incomplete information in your profile</li>
